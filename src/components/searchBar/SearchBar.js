@@ -22,8 +22,9 @@ function SearchBar({ setLocationHandler }) {
           type="text"
           name="search"
           value={query}
-          onKeyDown={keyPressCheck}/*elke keer dat jee een toets indrukt, wordt er gechecked of dit evt de ENTER is*/
           onChange={(e) => setQuery(e.target.value)} /*waarde wordt elke keer toegevoegd aan query*/
+
+          onKeyUp={keyPressCheck}/*elke keer dat jee een toets indrukt, wordt er gechecked of dit evt de ENTER is*/
           placeholder="Zoek een stad in Nederland"
       />
       <button

@@ -1,18 +1,18 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 import SearchBar from './components/searchBar/SearchBar';
 import TabBarMenu from './components/tabBarMenu/TabBarMenu';
 import MetricSlider from './components/metricSlider/MetricSlider';
-import axios from 'axios';
 import './App.css';
 
 
 const apiKey = 'a95ffa740846f24a0d03465edc5e8294'
 
 function App() {
-
+    const [weatherData, setWeatherData] = useState(null);
     const[location,setLocation]=useState('')
 
-    const [weatherData, setWeatherData] = useState(null);
+
 
 
     async function fetchData() {
@@ -27,14 +27,15 @@ function App() {
 
     return (
         <>
-        <SearchBar setLocationHandler={setLocation}/>{/*mag elke naam zijn*/}
+
 
 
             <div className="weather-container">
 
                 {/*HEADER -------------------- */}
                 <div className="weather-header">
-                    <SearchBar/>
+                    <SearchBar setLocationHandler={setLocation}/>{/*mag elke naam zijn*/}
+
 
                     <span className="location-details">
                         {weatherData &&
