@@ -10,6 +10,8 @@ const apiKey = 'a95ffa740846f24a0d03465edc5e8294'
 
 function App() {
 
+    const[location,setLocation]=useState('')
+
     const [weatherData, setWeatherData] = useState(null);
 
 
@@ -25,6 +27,7 @@ function App() {
 
     return (
         <>
+        <SearchBar setLocationHandler={setLocation}/>{/*mag elke naam zijn*/}
 
 
             <div className="weather-container">
