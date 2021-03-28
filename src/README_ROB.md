@@ -1,9 +1,12 @@
 1.    npm install
 2.    npm install react-hook-form --save
-3.    npm install react-router-dom --save
-4.    Voeg aan .gitignore /.idea toe
-5.    zet in filesettings Editor inspections goed
-6.    Zet volgende index.js
+3.    npm install react-router-dom --save 
+4.    npm install axios --save
+      daarna import axios from 'axios'; in app.js
+      
+5.    Voeg aan .gitignore /.idea toe
+6.    zet in filesettings Editor inspections goed
+7.    Zet volgende index.js
 
 Router element index.js ipv in app. Deze zijn (wanneer dit in app.js blijft) alleen beschikbaar in de
 <Router></Router>
